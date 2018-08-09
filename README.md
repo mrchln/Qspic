@@ -1,7 +1,7 @@
 ## jq图片放大插件 - Qspic
 
 ### 示例：
-[https://mrchln.github.io/Qspic/](https://mrchln.github.io/Qspic/)
+[https://mrchln.github.io/Qspic/examples](https://mrchln.github.io/Qspic/examples)
 
 ### 介绍：
 ```markdown
