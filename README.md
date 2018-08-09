@@ -1,6 +1,7 @@
-## 图片点击放大插件，基于jq，提供方法和自定义参数
+图片点击放大插件，基于jq，提供方法和自定义参数
 
-###介绍：
+### 介绍：
+```markdown
 /**
  * 青史图片方法切换、轮播插件
  * @version 2.0.0
@@ -16,32 +17,32 @@
  * 5.自定义参数
  * 6.提供内置方法
  */
+```
+### 示例：[https://mrchln.github.io/Qspic/](https://mrchln.github.io/Qspic/)
 
-###示例：[https://mrchln.github.io/Qspic/](https://mrchln.github.io/Qspic/)
-
-###使用方法：
+### 使用方法：
 ```markdown
-$('#boxcontent_box').Qspic({
-		animationShow: 'transition.expand',	//打开动画
-		animationSwitch: 'moveIn',	//切换动画
-		speed: 500,		//动画速度
-		debug:true,	//调试模式，默认关闭
-		loop:true,		//开启循环，默认关闭
-		min:[200,100],	//最小加载大小，[宽,高]，单位像素
-		autoPlay:2000,	//自动播放，自动切图
-		closed:function(){
-			console.log('closed');
-		},
-		opened:function(){
-			console.log('opened');
-		},
-		switched:function(){
-			console.log('switched');
-		}
-	});
-	$('#qspictest').click(function(){
-		console.log($('#boxcontent_box').Qspic('reset'));
-	})
+$('#element').Qspic({
+        animationShow: 'transition.expand',	//打开动画
+        animationSwitch: 'moveIn',	//切换动画
+        speed: 500,		//动画速度
+        debug:true,	//调试模式，默认关闭
+        loop:true,		//开启循环，默认关闭
+        min:[200,100],	//最小加载大小，[宽,高]，单位像素
+        autoPlay:2000,	//自动播放，自动切图
+        closed:function(){
+                console.log('closed');
+        },
+        opened:function(){
+                console.log('opened');
+        },
+        switched:function(){
+                console.log('switched');
+        }
+});
+$('#qspictest').click(function(){
+	console.log($('#boxcontent_box').Qspic('reset'));
+})
 ```
 ### Markdown
 
