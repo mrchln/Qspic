@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Qspic-图片放大插件-示例</title>
+	</head>
+	<style type="text/css">
+		html,body{
+			margin:0;padding:0
+		}
+		body{
+			background: #eee;
+			font-family: "仿宋";
+		}
+		.container{
+			width: 800px;
+			margin: 0 auto;
+			background: #fff;
+		}
+		#content{
+			width: 500px;
+			margin: 0 auto;
+			padding-top: 50px;
+		}
+		#content img{
+			margin-top: 20px;
+			margin-bottom: 20px;
+			height: auto;
+			width: 100%;
+		    cursor: crosshair;
+		    transition: box-shadow 0.5s;
+		    padding: 5px 5px;
+		    border: 1px solid #F1EDED;
+		    background-color: #fff;
+		}
+	</style>
+	<body>
+		<div class="container">
+			<div id="content">
+				<div class="txt">
+					<h3>属于浪漫的侨港</h3>
+					<p></p>
+					<p style="font-style: italic;">汉服青史</p>
+					<p><br>金黄的沙滩 沐浴着阳光 泛起涟漪的模样&nbsp;</p>
+					<p>渔船和炊烟 游离在海面 试图占据属于它的 一线天&nbsp;</p>
+					<p>没有贝壳的海边&nbsp;</p>
+					<p>布满了新鲜的 圆圆圈圈&nbsp;</p>
+					<p>黑白默片上映衬的景点 似乎并不抢眼&nbsp;</p>
+					<p>浪花属于没有渔船的海边&nbsp;</p>
+					<p>海鸥属于没有炊烟的蓝天&nbsp;</p>
+					<p>友谊属于你脚下的圆圆圈圈&nbsp;</p>
+					<p>而你 又属于 什么呢&nbsp;</p>
+					<p>属于皎洁月光下被拉长的身影&nbsp;</p>
+					<p>属于粼粼波光下被抚平的沙石&nbsp;</p>
+					<p>属于冷风中被拥抱的温暖&nbsp;</p>
+					<p>还是朝阳时离去的潮汐呢&nbsp;</p>
+					<p>也许 什么也不属于&nbsp;
+					</p>
+					<p>也许 只属于我的明天吧
+					</p>
+				</div>
+				<img src="picture/1482894233764630.jpg"/>
+				<img src="picture/1482894233352882.jpg"/>
+				<img src="picture/1482894233430421.jpg"/>
+				<img src="picture/1482894233727192.jpg"/>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--<script src="js/velocity.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/velocity.ui.min.js" type="text/javascript" charset="utf-8"></script>-->
+	<script src="js/Qspic.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	$('#content').Qspic({
+		animationShow: 'transition.expand',	//打开动画
+		animationSwitch: 'moveIn',	//切换动画
+		speed: 500,		//动画速度
+		debug:true,	//调试模式，默认关闭
+		loop:true,		//开启循环，默认关闭
+		min:[200,100],	//最小加载大小，[宽,高]，单位像素
+		autoPlay:2000,	//自动播放，自动切图
+		closed:function(){
+			console.log('closed');
+		},
+		opened:function(){
+			console.log('opened');
+		},
+		switched:function(){
+			console.log('switched');
+		}
+	});
+	</script>
+</html>
