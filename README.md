@@ -26,11 +26,12 @@
 
 ### 使用方法：
 
-在需要查看大图的页面引入`jquery.min.js`,引入插件`Qspic.js`，引入依赖的动画特效插件`velocity.min.js、velocity.ui.min.js`。
-`<script src="js/jquery.min.js"></script>`
-`<script src="js/velocity.min.js"></script>`
-`<script src="js/velocity.ui.min.js"></script>`
-`<script src="js/Qspic.js"></script>`
+在需要查看大图的页面引入`jquery.min.js`,
+引入插件`Qspic.js`，引入依赖的动画特效插件`velocity.min.js、velocity.ui.min.js`。
+>`<script src="js/jquery.min.js"></script>`
+>`<script src="js/velocity.min.js"></script>`
+>`<script src="js/velocity.ui.min.js"></script>`
+>`<script src="js/Qspic.js"></script>`
 
 **调用**
 ```markdown
