@@ -27,9 +27,9 @@
 ### 使用方法：
 
 在需要查看大图的页面</br>
-引入`jquery.min.js`,</br>
-引入插件`Qspic.js`，</br>
+引入依赖的`jquery.min.js`,</br>
 引入依赖的动画特效插件`velocity.min.js、velocity.ui.min.js`。</br>
+引入插件`Qspic.js`，</br>
 >`<script src="js/jquery.min.js"></script>`</br>
 >`<script src="js/velocity.min.js"></script>`</br>
 >`<script src="js/velocity.ui.min.js"></script>`</br>
