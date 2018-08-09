@@ -25,6 +25,14 @@
 ```
 
 ### 使用方法：
+
+在需要查看大图的页面引入`jquery.min.js`,引入插件`Qspic.js`，引入依赖的动画特效插件`velocity.min.js、velocity.ui.min.js`。
+`<script src="js/jquery.min.js"></script>`
+`<script src="js/velocity.min.js"></script>`
+`<script src="js/velocity.ui.min.js"></script>`
+`<script src="js/Qspic.js"></script>`
+
+**调用**
 ```markdown
 $(element).Qspic({
 	animationShow: 'transition.expand',	//打开动画
@@ -48,14 +56,15 @@ $(element).Qspic({
 //element为图片集合的父级元素
 ```
 ### 内置方法使用：
-
+```markdown
 $('#button').click(function(){
 	$(element).Qspic('reset');//调用重置方法，该方法重新获取图片，会根据浏览器可视范围重置打开图片的宽高，以及runtime
 	$(element).Qspic('destroy');//调用销毁方法，该方法会关闭打开的图片
 	$(element).Qspic('clearAutoPlay');//清除自动轮播
 })
-
+```
 //element为图片集合的父级元素
+
 ```markdown
 Syntax highlighted code block
 
