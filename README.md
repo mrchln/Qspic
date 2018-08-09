@@ -1,4 +1,6 @@
-图片点击放大插件，基于jq，提供方法和自定义参数
+## 图片放大插件 - Qspic
+
+### 示例：[https://mrchln.github.io/Qspic/](https://mrchln.github.io/Qspic/)
 
 ### 介绍：
 ```markdown
@@ -16,38 +18,43 @@
  * 4.支持自动轮播
  * 5.自定义参数
  * 6.提供内置方法
+ * 7.提供回调函数
  */
+ 
 ```
-### 示例：[https://mrchln.github.io/Qspic/](https://mrchln.github.io/Qspic/)
 
 ### 使用方法：
 ```markdown
-$('#element').Qspic({
-        animationShow: 'transition.expand',	//打开动画
-        animationSwitch: 'moveIn',	//切换动画
-        speed: 500,		//动画速度
-        debug:true,	//调试模式，默认关闭
-        loop:true,		//开启循环，默认关闭
-        min:[200,100],	//最小加载大小，[宽,高]，单位像素
-        autoPlay:2000,	//自动播放，自动切图
-        closed:function(){
-                console.log('closed');
-        },
-        opened:function(){
+$(element).Qspic({
+	animationShow: 'transition.expand',	//打开动画
+	animationSwitch: 'moveIn',		//切换动画
+	speed: 500,	//切换动画速度，单位毫秒
+	debug:false,	//调试模式，动画调试，默认关闭，true为打开
+	loop:false,	//开启循环，默认关闭，true为打开
+	min:[200,100],	//最小加载图片的大小，[宽,高]，单位像素，一般用于过滤小图片
+	autoPlay:false,	//自动轮播，自动切图,false为关闭，1000为1000毫秒切换
+        opened:function(){			//图片打开完成时回调
                 console.log('opened');
         },
-        switched:function(){
+        switched:function(){			//图片切换完成时回调
                 console.log('switched');
         }
+	closed:function(){			//图片关闭完成时回调
+                console.log('closed');		
+        },
 });
-$('#qspictest').click(function(){
-	console.log($('#boxcontent_box').Qspic('reset'));
-})
+
+//element为图片集合的父级元素
 ```
-### Markdown
+### 内置方法使用：
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+$('#button').click(function(){
+	$(element).Qspic('reset');//调用重置方法，该方法重新获取图片，会根据浏览器可视范围重置打开图片的宽高，以及runtime
+	$(element).Qspic('destroy');//调用销毁方法，该方法会关闭打开的图片
+	$(element).Qspic('clearAutoPlay');//清除自动轮播
+})
 
+//element为图片集合的父级元素
 ```markdown
 Syntax highlighted code block
 
