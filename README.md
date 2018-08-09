@@ -1,4 +1,4 @@
-## 图片放大插件 - Qspic
+## jq图片放大插件 - Qspic
 
 ### 示例：
 [https://mrchln.github.io/Qspic/](https://mrchln.github.io/Qspic/)
@@ -65,33 +65,9 @@ $('#button').click(function(){
 	$(element).Qspic('destroy');//调用销毁方法，该方法会关闭打开的图片
 	$(element).Qspic('clearAutoPlay');//清除自动轮播
 })
-```
+
 //element为图片集合的父级元素
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mrchln/hanfuqingshi.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
