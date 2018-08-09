@@ -1,6 +1,6 @@
 ## 图片点击放大插件，基于jq，提供方法和自定义参数
 
-You can use the [editor on GitHub](https://github.com/mrchln/hanfuqingshi.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+示例：[https://mrchln.github.io/Qspic/](https://mrchln.github.io/Qspic/)
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
