@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## 图片点击放大插件，基于jq，提供方法和自定义参数
 
 You can use the [editor on GitHub](https://github.com/mrchln/hanfuqingshi.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
