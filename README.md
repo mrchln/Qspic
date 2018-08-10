@@ -38,8 +38,8 @@
 **调用**
 ```markdown
 $(element).Qspic({
-	animationShow: 'transition.expand',	//打开动画
-	animationSwitch: 'moveIn',		//切换动画
+	animationShow: 'transition.expand',	//打开动画，所有velocity提供的动画
+	animationSwitch: 'moveIn',		//切换动画，所有velocity提供的动画
 	speed: 500,	//切换动画速度，单位毫秒
 	debug:false,	//调试模式，动画调试，默认关闭，true为打开
 	loop:false,	//开启循环，默认关闭，true为打开
