@@ -33,7 +33,7 @@
 >`<script src="js/jquery.min.js"></script>`  
 >`<script src="js/velocity.min.js"></script>`  
 >`<script src="js/velocity.ui.min.js"></script>`  
->`<script src="js/Qspic.js"></script>`
+>`<script src="js/Qspic.js"></script>`  
   
 **调用**
 ```markdown
