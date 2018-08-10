@@ -72,22 +72,22 @@
 	<script src="js/Qspic.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 	$('#content').Qspic({
-		animationShow: 'transition.expand',	//打开动画
-		animationSwitch: 'moveIn',	//切换动画
-		speed: 500,		//动画速度
-		debug:true,	//调试模式，默认关闭
-		loop:true,		//开启循环，默认关闭
-		min:[200,100],	//最小加载大小，[宽,高]，单位像素
-		autoPlay:2000,	//自动播放，自动切图
-		closed:function(){
-			console.log('closed');
-		},
-		opened:function(){
+		animationShow: 'transition.expand',	//打开动画，所有velocity提供的动画
+		animationSwitch: 'moveIn',		//切换动画，所有velocity提供的动画
+		speed: 500,	//切换动画速度，单位毫秒
+		debug:false,	//调试模式，动画调试，默认关闭，true为打开
+		loop:false,	//开启循环，默认关闭，true为打开
+		min:[200,100],	//最小加载图片的大小，[宽,高]，单位像素，一般用于过滤小图片
+		autoPlay:false,	//自动轮播，自动切图,false为关闭，1000为1000毫秒切换
+		opened:function(){			//图片打开完成时回调
 			console.log('opened');
 		},
-		switched:function(){
+		switched:function(){			//图片切换完成时回调
 			console.log('switched');
 		}
+		closed:function(){			//图片关闭完成时回调
+			console.log('closed');		
+		},
 	});
 	</script>
 </html>
