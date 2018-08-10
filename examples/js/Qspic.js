@@ -15,7 +15,7 @@
 !(function($) {
 	"use strict";
 	
-	//支持的动画列表，velocity内置动画
+	//支持的动画列表，velocity内置动画，结尾不包含In或Out
 	var transition = [
 		"transition.fade",
 		"transition.flipX",
