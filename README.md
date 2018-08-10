@@ -1,4 +1,4 @@
-## jq图片放大插件 - Qspic
+## 图片放大插件 - Qspic
 
 ### 示例：
 [https://mrchln.github.io/Qspic/examples](https://mrchln.github.io/Qspic/examples)
@@ -6,7 +6,7 @@
 ### 介绍：
 ```markdown
 /**
- * 青史图片方法切换、轮播插件
+ * 青史图片放大切换、轮播插件
  * @version 2.0.0
  * @author 汉服青史
  * @date 2018
