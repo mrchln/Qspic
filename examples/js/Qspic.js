@@ -76,7 +76,7 @@
     
     //运行时参数
     Qspic.RUNTIME = {
-    	index:0,
+    	index:-1,
     	content_img_list:[],
     	show_img_list:[],
     	status:{},
@@ -212,13 +212,21 @@
 					show_img_list[n].velocity({
 						'margin-left': -changeWidth / 2 + 'px'
 					},{
-						complete: function(elements) { completed = true; finish();private_methods.callBack(opt.switched,elements,Qspic.RUNTIME);},//切换完成的回调
+						complete: function(elements) { 
+							completed = true; finish();
+							private_methods.switchAction();
+							private_methods.callBack(opt.switched,elements,Qspic.RUNTIME);
+						},//切换完成的回调
 						duration:speed
 					});
 				} else {
 					show_img_list[index].velocity(opt.animationSwitch + 'Out', {duration:speed});
 					show_img_list[n].velocity(opt.animationSwitch + 'In' ,{
-						complete: function(elements) {completed = true;finish();private_methods.callBack(opt.switched,elements,Qspic.RUNTIME)},//切换完成的回调
+						complete: function(elements) {
+							completed = true;finish();
+							private_methods.switchAction();
+							private_methods.callBack(opt.switched,elements,Qspic.RUNTIME)
+							},//切换完成的回调
 						duration:speed
 					});;
 				}
@@ -245,7 +253,9 @@
 						completed = Qspic.RUNTIME.status.completed = false,
 						opt = that.options,
 						speed = opt.speed;
-					
+						
+					private_methods.switchAction();
+						
 					var switch_width = show_img_list[index].css('width');
 					var switch_height = show_img_list[index].css('height');
 	
@@ -337,6 +347,19 @@
 					'margin-top': -indexHeight / 2 + 'px',
 					'opacity': '0'
 				});
+			}
+      },
+      //切换按钮的显示和隐藏
+      switchAction:function(){
+	      	if(Qspic.RUNTIME.index>0){
+				Qspic.SYSTEM.$switch.find('.prev-img').show();
+			}else{
+				Qspic.SYSTEM.$switch.find('.prev-img').hide();
+			}
+			if(Qspic.RUNTIME.index<Qspic.RUNTIME.show_img_list.length-1){
+				Qspic.SYSTEM.$switch.find('.next-img').show();
+			}else{
+				Qspic.SYSTEM.$switch.find('.next-img').hide();
 			}
       },
       
