@@ -50,7 +50,7 @@ $(element).Qspic({
         },
         switched:function(){			//图片切换完成时回调
                 console.log('switched');
-        }
+        },
 	closed:function(){			//图片关闭完成时回调
                 console.log('closed');		
         },
